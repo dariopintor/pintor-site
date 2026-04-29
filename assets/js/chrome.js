@@ -12,7 +12,6 @@
           <a href="index.html">Início</a>
           <a href="sobre.html">Sobre</a>
           <a href="disciplinas.html">Disciplinas</a>
-          <a href="curriculo.html">Currículo</a>
           <a href="blog.html">Blog</a>
           <a href="materiais.html">Materiais</a>
           <a href="contato.html">Contato</a>
