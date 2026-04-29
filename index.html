@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>José Dario Pintor — Professor de Programação</title>
+  <meta name="description" content="Site pessoal de José Dario Pintor da Silva — professor de Lógica de Programação, Engenharia de Software, POO e Desenvolvimento Mobile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-screen-label="01 Home">
+  <div id="site-header-mount"></div>
+
+  <main id="conteudo">
+    <section class="hero wrap">
+      <div class="hero__grid">
+        <div>
+          <div class="hero__eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="eyebrow" style="margin:0">Professor · IFB · Brasília</span>
+          </div>
+          <h1>
+            José Dario<br>Pintor da&nbsp;Silva<em>.</em>
+          </h1>
+          <p class="lead hero__lede">
+            Professor de <strong style="color:var(--ink); font-weight:500">Lógica de Programação</strong>
+            e desenvolvimento — ensino como se fosse artesania: devagar,
+            com repetição e com respeito à curiosidade de quem começa.
+          </p>
+          <div class="hero__meta">
+            <span>Desde<strong>2015</strong></span>
+            <span>Disciplinas<strong>4 ativas</strong></span>
+            <span>Materiais<strong>32 públicos</strong></span>
+          </div>
+          <div style="margin-top:var(--space-4); display:flex; gap:var(--space-2); flex-wrap:wrap;">
+            <a class="btn" href="disciplinas.html">Ver disciplinas →</a>
+            <a class="btn btn--ghost" href="materiais.html">Baixar materiais</a>
+          </div>
+        </div>
+
+        <figure class="portrait" aria-label="Foto do professor — placeholder">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="stripes" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#d8d8d2" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="200" height="250" fill="url(#stripes)"/>
+            <text x="100" y="130" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="48" fill="#0f172a" font-weight="500" letter-spacing="0.04em">JDP</text>
+            <text x="100" y="155" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#64748b" letter-spacing="0.3em">FOTO · 4:5</text>
+          </svg>
+          <figcaption class="portrait__caption">
+            <span>ret.01</span>
+            <span>substituir</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="blog-feature wrap" aria-labelledby="blog-h">
+      <div class="blog-feature__head">
+        <h2 id="blog-h">Último no blog</h2>
+        <a class="link-arrow" href="blog.html">Todos os posts →</a>
+      </div>
+
+      <div class="blog-feature__grid">
+        <a class="post-hero" href="post.html">
+          <div class="post-hero__img" aria-hidden="true">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <pattern id="h1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="8" stroke="#d8d8d2" stroke-width="2"/>
+                </pattern>
+              </defs>
+              <rect width="400" height="250" fill="url(#h1)"/>
+              <rect x="150" y="95" width="100" height="60" fill="#f7f7f5" stroke="#0f172a" stroke-width="1"/>
+              <text x="200" y="132" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748b" letter-spacing="0.2em">CAPA · 16:10</text>
+            </svg>
+          </div>
+          <div class="post-hero__meta">
+            <span>10 · abr · 2026</span>
+            <span class="post-hero__cat">DIDÁTICA</span>
+            <span>7 min de leitura</span>
+          </div>
+          <h3>Por que continuo ensinando Lógica de Programação com lápis e papel</h3>
+          <p>Depois de dez anos dando a mesma disciplina, voltei a pedir que os alunos escrevessem algoritmos à mão antes de abrir o editor. Aqui está o que mudou.</p>
+        </a>
+
+        <ul class="post-list" aria-label="Posts recentes">
+          <li>
+            <a href="post.html">
+              <div class="post-list__meta">02 · abr · 2026 — POO</div>
+              <h4>Herança não é reuso: é um compromisso</h4>
+              <p>Quando substituir herança por composição sem virar fundamentalista.</p>
+            </a>
+          </li>
+          <li>
+            <a href="post.html">
+              <div class="post-list__meta">18 · mar · 2026 — SWIFT</div>
+              <h4>Opcionais em Swift, sem mistério</h4>
+              <p>Uma explicação devagar para quem ainda tropeça no ponto de interrogação.</p>
+            </a>
+          </li>
+          <li>
+            <a href="post.html">
+              <div class="post-list__meta">25 · fev · 2026 — ENSINO</div>
+              <h4>Correção em voz alta: um ritual de sala</h4>
+              <p>O que aprendi corrigindo exercícios no quadro em vez de entregar gabaritos.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
