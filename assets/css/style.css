@@ -742,8 +742,7 @@ hr.rule {
 .post-index a:hover .post-index__title { color: var(--accent); }
 
 .post-article {
-  max-width: 680px;
-  margin: 0 auto;
+  max-width: 100%;
   font-family: var(--font-serif);
   font-size: 1.18rem;
   line-height: 1.7;
@@ -789,8 +788,8 @@ hr.rule {
 .post-article li { margin-bottom: 0.3em; }
 .post-article hr { border: 0; border-top: 1px solid var(--rule); margin: var(--space-4) 0; }
 .post-header {
-  max-width: 760px;
-  margin: 0 auto var(--space-4);
+  max-width: 100%;
+  margin: 0 0 var(--space-4);
 }
 .post-header h1 {
   font-size: var(--step-4);
@@ -815,8 +814,8 @@ hr.rule {
   max-width: 55ch;
 }
 .post-nav {
-  max-width: 680px;
-  margin: var(--space-5) auto 0;
+  max-width: 100%;
+  margin: var(--space-5) 0 0;
   padding-top: var(--space-3);
   border-top: 1px solid var(--rule);
   display: flex;

@@ -16,50 +16,62 @@
     <article class="wrap" style="padding-top: var(--space-5); padding-bottom: var(--space-5);">
 
       <header class="post-header">
+
+        <h1>Descomplicando o vocabulário do desenvolvimento de software</h1>
+        <p class="post-header__dek">
+        </p>
         <div class="post-header__meta">
           <span>01 · mai · 2026</span>
           <span class="post-header__cat">DESENVOLVIMENTO</span>
           <span>12 min de leitura</span>
         </div>
-        <h3>A Jornada do Código: Entendendo o Processo Completo de Desenvolvimento de Software</h3>
-        <p class="post-header__dek">
-          Um mapa visual do desenvolvimento de software — e um índice para você explorar cada etapa.
-        </p>
       </header>
 
-      <figure style="margin: 0 0 var(--space-4); display:flex; justify-content:center;">
-        <img src="../assets/img/jornada.png" alt="A Jornada do Código" style="width:70%;display:block;">
+      <figure style="margin: 0 0 var(--space-4);">
+        <img src="../assets/img/jornada.png" alt="A Jornada do Código" style="width:100%;display:block;">
       </figure>
 
       <div class="post-article">
 
-        Quando começamos a aprender programação pensamos que codificar é a única coisa que importa quando nós propomos a desenvolver um software
-        <h2>1. Introdução: A Grande Engrenagem</h2>
-        <p>[Conteúdo a desenvolver]</p>
+       <h2>1. INTRODUÇÃO</h2>
 
-        <h2>2. A Bússola do Projeto: O Processo de Software</h2>
-        <p>[Conteúdo a desenvolver]</p>
-        <p>→ <a href="post-processo-de-software.html">O que é um Processo de Software e suas Fases</a></p>
+<p>Uma coisa que sempre me preocupa é como meus alunos estão aprendendo. Estou sempre buscando formas de melhorar minhas analogias e práticas em sala de aula, a fim de manter o interesse deles na disciplina. Algo que sempre tenho em mente é que, para a aprendizagem se tornar mais eficaz, o conhecimento precisa ter significado. Isso quer dizer que, à medida que aprendemos algo novo e o relacionamos com coisas que já sabemos, vamos dando sentido ao que estamos aprendendo, o que torna o processo mais fácil e duradouro. Quem nos ensina isso é o nosso grande educador Paulo Freire, que desenvolveu um método de alfabetização para adultos no qual o ensino se fundamentava em 'palavras geradoras' extraídas da realidade do estudante, significando assim os novos conceitos.</p>
 
-        <h2>3. A Anatomia da Aplicação: Frontend, Backend e Banco de Dados</h2>
-        <p>[Conteúdo a desenvolver]</p>
-        <p>→ <a href="post-frontend-vs-backend.html">Frontend vs Backend: Entendendo as peças do quebra-cabeça</a></p>
-        <p>→ <a href="post-banco-de-dados.html">Onde os dados moram: Uma introdução a Bancos de Dados e ORMs</a></p>
+<p>Mas, trazendo essa forma de ensinar para o nosso mundo da tecnologia, como posso encontrar essas 'palavras geradoras' para os meus alunos? Alguns já chegam com uma boa bagagem de termos do universo tech, mas, como é praxe na docência, não partimos do princípio de que todos estão no mesmo nível. Pensando nisso, resolvi escrever este texto geral abordando o passo a passo para desenvolver um software (formalmente conhecido como processo de software), para já ir introduzindo palavras e conceitos que ajudarão os alunos iniciantes.</p>
 
-        <h2>4. A Colaboração: Versionamento de Código</h2>
-        <p>[Conteúdo a desenvolver]</p>
-        <p>→ <a href="post-git-github.html">Git e GitHub: Como desenvolvedores trabalham em equipe</a></p>
+<p>O artigo estará organizado com um texto geral explicando o passo a passo, tentando oferecer uma 'visão de cima da floresta'. Em cada tópico, haverá links para artigos mais aprofundados sobre o tema, oferecendo assim uma 'visão de dentro das árvores'.</p>
 
-        <h2>5. A Entrega: O que é o famoso Deploy?</h2>
-        <p>[Conteúdo a desenvolver]</p>
-        <p>→ <a href="post-deploy.html">O que é Deploy? Como seu código chega aos usuários</a></p>
+<p>Você não precisa decorar nada disso agora. O objetivo é você começar a reconhecer essas palavras-chave quando ouvir um professor ou colega falando sobre elas e entender que elas são peças diferentes de um quebra-cabeça maior. Assim, quando mergulharmos nos detalhes de cada uma dessas etapas nos próximos artigos, você já terá uma base sólida para compreender o que está acontecendo. Lembre-se sempre: todo software, grande ou pequeno, segue esse caminho. E você, ao compreender isso, já está alguns passos à frente na sua jornada de aprendizado.</p>
 
-        <h2>6. A Garantia de Qualidade (QA e Testes)</h2>
-        <p>[Conteúdo a desenvolver]</p>
-        <p>→ <a href="post-testes-de-software.html">Testes de Software: Por que testar o código antes do deploy?</a></p>
+<h2>2. A Bússola do Projeto: O Processo de Software</h2>
 
-        <h2>7. Conclusão e Próximos Passos</h2>
-        <p>[Conteúdo a desenvolver]</p>
+<p>Imagine que você quer construir uma casa. Você não chega no lote, pega uma enxada e começa a cavar sem direção, certo? Antes disso, você precisa de um plano, um mapa que mostre por onde começar. Pois bem, o processo de software é exatamente essa bússola. É o mapa que nos guia desde o momento em que temos uma ideia até o instante em que o software está pronto e funcionando nas mãos dos usuários.</p>
+
+<p>Quando estamos iniciando na programação, pode parecer que um processo é "chato" ou "desnecessário". Afinal, para programas pequenos e pessoais, você pode simplesmente começar a codar e ir ajustando. Mas aqui está a verdade: à medida que os projetos crescem, a falta de um processo vira caos. Geralmente vemos sobre processo de software nas disciplinas de análise e projeto nos cursos de Tecnologia da Informação, que acontece do segundo modulo em diante. Existem várias formas de organizar o processo de software, mas de forma bem geral, todo software passa por estas etapas: análise, quando você entende o que o cliente quer; design, quando você planeja como vai construir tudo isso; desenvolvimento, que é quando a gente codifica de verdade; testes, quando você verifica se tudo funciona e encontra os erros; deployment, que é apenas um nome chique para "colocar no ar" para as pessoas usarem; e manutenção, quando você cuida, atualiza e melhora o software mesmo depois dele estar pronto.</p>
+
+<h2>3. Arquitetura de Software: O Projeto da Casa Antes de Construir</h2>
+
+<p>Lembra quando falamos que o processo de software é como ter um mapa para construir uma casa? Pois bem, dentro desse mapa existe algo muito importante chamado arquitetura de software. A arquitetura é o projeto detalhado de como as peças da sua aplicação vão estar organizadas e como vão se comunicar entre si. Não é sobre qual tecnologia usar (HTML, JavaScript, Python...), mas sim sobre qual estrutura, qual formato você vai dar ao seu software. Pense assim: a arquitetura é o projeto do arquiteto (como os cômodos estão organizados, como as pessoas se movem), enquanto as tecnologias são os materiais que você usa (tijolos, cimento, madeira). Um bom projeto com materiais ruins é melhor do que um projeto ruim com materiais caros!</p>
+
+<p>Existem vários tipos de arquitetura, cada um com um propósito diferente. A arquitetura cliente-servidor é a mais comum e é exatamente o que você já conhece: você (cliente) faz requisições para um servidor central que processa tudo e responde (é como um restaurante onde você pede ao garçom e ele vai à cozinha). A arquitetura P2P (peer-to-peer, ou "ponto a ponto") é quando todos os computadores são iguais e se comunicam diretamente uns com os outros, sem um chefe (é como amigos compartilhando arquivos direto pelo WhatsApp, sem um intermediário) – funciona bem para apps de compartilhamento, mas é mais complexa. A arquitetura monolítica é quando tudo está junto em um único bloco (como uma casa com apenas um grande salão em vez de cômodos separados) – é simples para pequenos projetos, mas fica bagunçada conforme cresce. A arquitetura de microsserviços divide a aplicação em pequenos serviços independentes que conversam entre si (como cômodos separados que funcionam independentemente) – é mais complexa, mas muito mais flexível para grandes projetos. A arquitetura em camadas (ou MVC) organiza seu código em "andares": a camada de apresentação (frontend), a camada de lógica (backend) e a camada de dados (banco de dados) – é um meio termo que funciona bem para a maioria dos projetos iniciantes.</p>
+
+<p>A escolha da arquitetura certa depende do tamanho do seu projeto, de quantas pessoas estão trabalhando, e de quanto tempo você quer que ele dure sem precisar ser reescrito. Um app pequeno pode usar cliente-servidor simples ou monolítico, mas um gigante como Netflix usa microsserviços para conseguir escalar, enquanto apps como BitTorrent usam P2P para distribuir dados. Essas decisões geralmente acontecem na fase de design do processo de software – é aí que você, junto com o time, decide qual será o "esqueleto" da sua aplicação. Não se preocupe em escolher a arquitetura perfeita agora – você aprenderá mais sobre isso nas disciplinas de Desenvolvimento Web e em cursos mais avançados. Por enquanto, o importante é saber que escolher a arquitetura certa é tão importante quanto escolher as tecnologias!</p>
+
+<h2>4. A Anatomia da Aplicação: Frontend, Backend e Banco de Dados</h2>
+
+<p>Toda aplicação que você usa tem três componentes principais que trabalham juntos. Pense em um restaurante: o frontend é o garçom que você vê (tudo que aparece na sua tela – botões, imagens, cores) e é construído com tecnologias como HTML, CSS e JavaScript, ou frameworks como React e Vue; o backend é a cozinha nos bastidores (a lógica que processa seus dados) feito com linguagens como Python, Java, Node.js ou C#; e o banco de dados é o freezer onde tudo fica guardado permanentemente, usando tecnologias como MySQL, PostgreSQL ou MongoDB. Quando você clica em um botão no Instagram, por exemplo, o frontend recebe sua ação, envia para o backend processar, que consulta o banco de dados e devolve a resposta para o frontend mostrar na tela.</p>
+
+<p>Você só vê e interage com o frontend, mas nos bastidores o backend (rodando em servidores poderosos) está o tempo todo verificando se você tem permissão, validando informações e consultando o banco de dados. É por isso que sua senha não fica armazenada no seu celular – ela fica guardada de forma segura no banco de dados, protegida e acessível de qualquer dispositivo. Sem essas três peças trabalhando juntas, nada funcionaria.</p>
+
+<p>Aqui vem algo legal: o seu currículo de tecnologia foi pensado justamente para você aprender essas peças de forma progressiva! Na disciplina de Lógica de Programação I, você aprenderá JavaScript e na de Webdesign, estudará HTML e CSS – tudo que você precisa para começar com frontend. Os frameworks de front (como React e Vue) virão depois, na disciplina de Desenvolvimento Web. Já a parte de backend é abordada em Lógica de Programação II, onde você aprofundará em linguagens de programação mais robustas. Então não se preocupe em aprender tudo agora – você começará com frontend (mais visual e motivador), depois backend (onde a lógica fica mais complexa), e por fim banco de dados (mais técnico). Mas não se preocupe em aprofundar tudo agora – nos próximos artigos, mergulharemos em cada uma dessas peças com muito mais detalhe!</p>
+
+<h2>5. A Entrega: O que é o Famoso Deploy?</h2>
+
+<p>Você já aprendeu que uma aplicação tem frontend, backend e banco de dados. Você já estudou como funcionam, como se comunicam, como tudo é desenvolvido... Mas aqui vem a grande pergunta: como aquele software que você criou no seu computador chega até as mãos das pessoas? Essa resposta é o deploy. Deploy é simplesmente o ato de colocar sua aplicação online, em um servidor, para que as pessoas consigam acessá-la. Pense assim: você passou semanas construindo um restaurante perfeito, com receitas incríveis, design bonito – mas enquanto ele estiver só no seu computador, é como ter um restaurante fechado. O deploy é abrir aquela porta e deixar as pessoas entrar. Tecnologias como Vercel e Netlify (para frontend), Heroku, AWS e Azure (para backend), e Docker (para empacotar tudo) são as ferramentas que ajudam a fazer isso acontecer.</p>
+
+<p>O deploy não é apenas "copiar e colar" seus arquivos em um servidor qualquer. Existem vários passos importantes: você precisa preparar seu código, garantir que todas as dependências estão corretas, configurar as variáveis de ambiente (informações secretas como senhas), testar se tudo está funcionando, e só depois colocar no ar. Se algo der errado nesse processo, sua aplicação não funciona ou fica instável. Por isso existem profissionais especializados em DevOps (operações de desenvolvimento) que cuidam justamente dessa ponte entre o código que você escreve e a aplicação rodando no mundo real.</p>
+
+<p>O legal é que você não precisa ser um especialista em deploy desde agora – isso você aprenderá nas disciplinas de Desenvolvimento Web e depois em disciplinas mais avançadas. Por enquanto, o importante é você entender que develop, testar e fazer deploy são três fases diferentes e igualmente importantes no processo de criar software. Quando você terminar seu primeiro projeto e conseguir colocar ele online para seus amigos acessarem, aí sim você sentirá a verdadeira magia da programação!</p>
 
       </div>
 
