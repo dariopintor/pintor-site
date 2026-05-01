@@ -1,26 +1,27 @@
 // Header + footer compartilhados (inseridos antes do app.js)
 (function () {
-  const depth = location.pathname.split('/').filter(Boolean).length > 1 ? '../' : '';
+  const scriptEl = document.querySelector('script[src*="chrome.js"]');
+  const base = scriptEl ? new URL(scriptEl.src).href.replace('assets/js/chrome.js', '') : '/';
   const header = `
     <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
     <header class="site-header">
       <nav class="navbar" aria-label="Principal">
         <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <div class="nav-links" id="primary-nav">
-          <a href="${depth}index.html" class="nav-link">Início</a>
-          <a href="${depth}blog.html" class="nav-link">Blog</a>
-          <a href="${depth}disciplinas.html" class="nav-link">Disciplinas</a>
-          <a href="${depth}materiais.html" class="nav-link">Materiais</a>
-          <a href="${depth}sobre.html" class="nav-link">Sobre</a>
-          <a href="${depth}contato.html" class="nav-link">Contato</a>
+          <a href="${base}index.html" class="nav-link">Início</a>
+          <a href="${base}blog.html" class="nav-link">Blog</a>
+          <a href="${base}disciplinas.html" class="nav-link">Disciplinas</a>
+          <a href="${base}materiais.html" class="nav-link">Materiais</a>
+          <a href="${base}sobre.html" class="nav-link">Sobre</a>
+          <a href="${base}contato.html" class="nav-link">Contato</a>
         </div>
-        <a href="${depth}index.html" class="nav-profile" aria-label="Página inicial">
+        <a href="${base}index.html" class="nav-profile" aria-label="Página inicial">
           <div class="nav-profile-info">
             <div class="nav-name">Dario Pintor</div>
             <div class="nav-domain">dariopintor.com</div>
           </div>
           <div class="nav-avatar">
-            <img src="${depth}assets/img/dariopintor.jpeg" alt="Dario Pintor">
+            <img src="${base}assets/img/dariopintor.jpeg" alt="Dario Pintor">
           </div>
         </a>
       </nav>
