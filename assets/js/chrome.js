@@ -4,17 +4,21 @@
     <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
     <header class="site-header">
       <div class="site-header__inner">
-        <a href="index.html" class="brand">
-          José Dario Pintor <span class="brand__mono">DARIOPINTOR.COM</span>
-        </a>
+     
         <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
         <nav class="nav" id="primary-nav" aria-label="Principal">
           <a href="index.html">Início</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="disciplinas.html">Disciplinas</a>
           <a href="blog.html">Blog</a>
-          <a href="materiais.html">Materiais</a>
-          <a href="contato.html">Contato</a>
+          <a href="disciplinas.html">Disciplinas</a>
+            <a href="materiais.html">Materiais</a>
+          <a href="sobre.html">Sobre</a>
+         
+       <a href="contato.html">Contato</a>
+          
+          <a href="index.html" class="brand">
+          Dario Pintor<span class="brand__mono">  ·  DARIOPINTOR.COM</span>
+        </a>
+          
         </nav>
       </div>
     </header>
