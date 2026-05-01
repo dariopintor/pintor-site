@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Por que continuo ensinando Lógica com lápis e papel — Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-screen-label="08 Post">
+  <div id="site-header-mount"></div>
+
+  <main id="conteudo">
+    <article class="wrap" style="padding-top: var(--space-5); padding-bottom: var(--space-5);">
+
+      <header class="post-header">
+        <div class="post-header__meta">
+          <span>10 · abr · 2026</span>
+          <span class="post-header__cat">DIDÁTICA</span>
+          <span>7 min de leitura</span>
+        </div>
+        <h1>Por que continuo ensinando Lógica de Programação com lápis e papel</h1>
+        <p class="post-header__dek">
+          Depois de dez anos dando a mesma disciplina, voltei a pedir que os alunos
+          escrevessem algoritmos à mão antes de abrir o editor. Aqui está o que mudou.
+        </p>
+      </header>
+
+      <div class="post-article">
+        <p>
+          Em 2015, quando comecei a lecionar Lógica de Programação, a primeira coisa
+          que fiz foi eliminar o caderno. Pedir exercícios manuscritos parecia coisa
+          de professor que não confia no computador — e meus alunos já vinham
+          digitando muito antes de entrarem na sala.
+        </p>
+        <p>
+          Dez anos depois, voltei atrás. Este post é sobre o que mudou na minha cabeça
+          e, principalmente, no comportamento da turma.
+        </p>
+
+        <h2>O sintoma que não ia embora</h2>
+        <p>
+          O aluno abre o editor, escreve cinco linhas, aperta <code>run</code>, erro,
+          corrige, <code>run</code>, erro, corrige. Em dez minutos, ele tem um código
+          que funciona — mas não sabe dizer <em>por que</em> funciona. E duas semanas
+          depois, quando a estrutura aparece em outro contexto, ele não reconhece.
+        </p>
+        <blockquote>
+          Programar no editor é um processo de conversar com o computador;
+          programar no papel é um processo de conversar consigo mesmo.
+        </blockquote>
+
+        <h2>O experimento</h2>
+        <p>
+          No semestre passado, mudei uma regra simples: nas primeiras quatro aulas,
+          toda resolução de exercício precisava ser escrita à mão primeiro. Só depois
+          de assinada pelo colega de ao lado é que o código podia ir pro editor.
+        </p>
+        <ul>
+          <li>Exercício manuscrito, com teste de mesa escrito embaixo;</li>
+          <li>Revisão cruzada entre pares de alunos;</li>
+          <li>Só então digitação e execução.</li>
+        </ul>
+
+        <h3>Exemplo do que eu peço</h3>
+        <pre><code>Algoritmo soma_pares
+  total ← 0
+  para i de 1 até 10 faça
+    se i mod 2 = 0 então
+      total ← total + i
+    fim_se
+  fim_para
+  escreva(total)
+fim</code></pre>
+
+        <h2>O que mudou</h2>
+        <p>
+          A primeira coisa que notei foi o barulho da sala: menos teclas, mais
+          conversa. A segunda foi o tempo de resolução — subiu. E essa era
+          exatamente a ideia.
+        </p>
+        <p>
+          Nas provas de fim do bimestre, a diferença apareceu em um lugar específico:
+          a seção de "explique o que este código faz". As respostas eram mais longas,
+          mais corretas, e com menos paráfrase literal do código.
+        </p>
+
+        <hr>
+
+        <p>
+          Não é uma defesa do papel pelo papel. É um lembrete de que a ferramenta
+          que a gente põe na frente do aluno molda o tipo de pensamento que ele
+          tem permissão para ter. O editor é ótimo — desde que ele venha <em>depois</em>.
+        </p>
+      </div>
+
+      <nav class="post-nav" aria-label="Navegação entre posts">
+        <a href="post.html">← Herança não é reuso</a>
+        <a href="../blog.html">Todos os posts</a>
+        <a href="post.html">Opcionais em Swift →</a>
+      </nav>
+    </article>
+  </main>
+
+  <div id="site-footer-mount"></div>
+  <script src="../assets/js/chrome.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

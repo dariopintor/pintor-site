@@ -32,7 +32,9 @@
         </div>
         <div>
           <a href="mailto:jose.pintor@ifb.edu.br">jose.pintor@ifb.edu.br</a><br>
-          <a href="https://github.com/dariopintor" rel="noopener">github.com/dariopintor</a>
+          <a href="https://github.com/dariopintor" rel="noopener">github.com/dariopintor</a><br>
+          <a href="https://www.youtube.com/@dariopintor" rel="noopener" target="_blank">youtube.com/@dariopintor</a><br>
+          <a href="http://lattes.cnpq.br/0370524014203647" rel="noopener" target="_blank">Currículo Lattes</a>
         </div>
         <div class="site-footer__mono">
           © <span data-year></span> · DARIOPINTOR.COM
