@@ -1,26 +1,29 @@
 // Header + footer compartilhados (inseridos antes do app.js)
 (function () {
+  const depth = location.pathname.split('/').filter(Boolean).length > 1 ? '../' : '';
   const header = `
     <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
     <header class="site-header">
-      <div class="site-header__inner">
-     
+      <nav class="navbar" aria-label="Principal">
         <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-        <nav class="nav" id="primary-nav" aria-label="Principal">
-          <a href="index.html">Início</a>
-          <a href="blog.html">Blog</a>
-          <a href="disciplinas.html">Disciplinas</a>
-            <a href="materiais.html">Materiais</a>
-          <a href="sobre.html">Sobre</a>
-         
-       <a href="contato.html">Contato</a>
-          
-          <a href="index.html" class="brand">
-          Dario Pintor<span class="brand__mono">  ·  DARIOPINTOR.COM</span>
+        <div class="nav-links" id="primary-nav">
+          <a href="${depth}index.html" class="nav-link">Início</a>
+          <a href="${depth}blog.html" class="nav-link">Blog</a>
+          <a href="${depth}disciplinas.html" class="nav-link">Disciplinas</a>
+          <a href="${depth}materiais.html" class="nav-link">Materiais</a>
+          <a href="${depth}sobre.html" class="nav-link">Sobre</a>
+          <a href="${depth}contato.html" class="nav-link">Contato</a>
+        </div>
+        <a href="${depth}index.html" class="nav-profile" aria-label="Página inicial">
+          <div class="nav-profile-info">
+            <div class="nav-name">Dario Pintor</div>
+            <div class="nav-domain">dariopintor.com</div>
+          </div>
+          <div class="nav-avatar">
+            <img src="${depth}assets/img/dariopintor.jpeg" alt="Dario Pintor">
+          </div>
         </a>
-          
-        </nav>
-      </div>
+      </nav>
     </header>
   `;
   const footer = `

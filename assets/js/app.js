@@ -2,10 +2,10 @@
 (function () {
   // --- Nav mobile toggle ---
   const toggle = document.querySelector('.nav__toggle');
-  const nav = document.querySelector('.nav');
-  if (toggle && nav) {
+  const navLinks = document.querySelector('.nav-links');
+  if (toggle && navLinks) {
     toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
+      const open = navLinks.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.textContent = open ? 'Fechar' : 'Menu';
     });
@@ -18,8 +18,8 @@
 
   // --- Marcar link ativo ---
   const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav a').forEach(a => {
-    const href = a.getAttribute('href');
+  document.querySelectorAll('.nav-link').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('/').pop();
     if (href === here) a.setAttribute('aria-current', 'page');
   });
 
