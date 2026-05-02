@@ -1135,7 +1135,7 @@ hr.rule {
 
   max-width: var(--col);
   margin: 0 auto;
-  padding: 51px 19px 77px;
+  padding: 41px 15px 62px;
   color: var(--ink);
 }
 
@@ -1308,7 +1308,7 @@ hr.rule {
 
 /* ── Mobile ── */
 @media (max-width: 640px) {
-  .art { padding: 32px 16px 51px; }
+  .art { padding: 26px 13px 41px; }
   .art-body { font-size: 18px; line-height: 1.7; }
   .art-body h2 { font-size: 20px; }
   .art-body p:first-of-type::first-letter { font-size: 3em; }
