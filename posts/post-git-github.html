@@ -3,16 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Git e GitHub — Blog · Dario Pintor</title>
+  <title>O que é o Versionamento de Código — Dario Pintor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-screen-label="Post">
   <div id="site-header-mount"></div>
 
+  <main id="conteudo">
+    <div class="art">
 
+      <header>
+        <div class="art-meta">
+          <span>02 · mai · 2026</span>
+          <span class="art-meta__sep">·</span>
+          <span class="art-meta__cat">Ferramentas</span>
+          <span class="art-meta__sep">·</span>
+          <span>10 min de leitura</span>
+        </div>
+        <h1>O que é o Versionamento de Código?</h1>
+        <p class="art-dek">Entendendo o básico do Git e GitHub</p>
+      </header>
+
+      <figure class="art-cover">
+        <img src="../assets/img/versionamento.png" alt="Versionamento de Código com Git e GitHub">
+      </figure>
+
+      <div class="art-body">
+
+        <p>Se você está começando a programar, provavelmente já viveu aquele momento incômodo: fez uma mudança no código, algo deu errado, e então precisa voltar a uma versão anterior em que embora não estivesse muito boa estava funcionando. Outra situação parecida é quando estamos trabalhando com um colega no mesmo arquivo e no final ninguém sabe exatamente quem alterou o quê. Essas situações são tão comuns que existe uma solução inteira pensada para evitá-las. Vamos conversar sobre versionamento de código.</p>
+
+        <p>O versionamento de código é uma máquina do tempo para seus projetos de programação. Cada mudança que você faz fica registrada, com data, hora, e uma anotação explicando o que você alterou e por quê. Se algo der errado, você pode voltar três mudanças atrás sem problema nenhum. Se você está trabalhando com outras pessoas, cada um trabalha no seu próprio espaço e depois tudo se encaixa perfeitamente.</p>
+
+        <p>Esse sistema rastreia cada mudança feita em seus arquivos de programação. Funciona assim: você tem uma pasta com seus arquivos Python, JavaScript ou qualquer outra linguagem. Sempre que você faz uma mudança que considera importante, você marca aquele momento. Você escreve uma mensagem curta explicando o que mudou (algo como "Corrigi o bug da calculadora" ou "Adicionei a função de login"). O sistema guarda aquilo como um ponto na história do seu projeto.</p>
+
+        <h2>Git e GitHub: Dois Conceitos, Uma Relação Simples</h2>
+
+        <p>Existem várias aplicações disponíveis para versionamento de código, mas nesse artigo vamos focar no Git e no GitHub. As pessoas usam "Git" e "GitHub" como se fossem a mesma coisa, mas não são. O Git é uma ferramenta. Você baixa ela, instala no seu computador, e ela funciona localmente. Depois de aprender alguns conceitos básicos já pode versionar o seu código. Embora usar o git por terminal seja o mais comum, ele existe também na versão com interface gráfica chamada de GitHub Desktop.</p>
+
+        <p>Já o GitHub é um servidor na internet. Você usa o Git localmente no seu computador para fazer o trabalho de versionamento, e depois você envia tudo para o GitHub para que outras pessoas vejam, para que você tenha backup, ou para que você acesse de outro computador. O GitHub é como um Google Drive, mas feito especificamente para código.</p>
+
+        <div class="callout">
+          <span class="callout__label">Resumo rápido</span>
+          <p><strong>Git</strong> é a ferramenta que você instala e usa. <strong>GitHub</strong> é o lugar onde você hospeda seus projetos Git na nuvem. Você pode usar Git sem nunca usar GitHub, mas a maioria das pessoas usa os dois juntos porque é muito mais poderoso assim.</p>
+        </div>
+
+        <h2>Duas formas de usar o Git: terminal e interface gráfica</h2>
+
+        <p>Antes de começar a utilizar o GitHub, é fundamental que você domine o Git. Existem duas formas principais de utilizá-lo: via linha de comando (direto no terminal — <a href="https://git-scm.com/download" rel="noopener" target="_blank">git-scm.com/download</a>) ou através de uma interface gráfica, como o GitHub Desktop (<a href="https://desktop.github.com/download/" rel="noopener" target="_blank">desktop.github.com/download</a>). Os conceitos do Git estão presentes em ambas as abordagens, mas na interface gráfica os comandos são executados nos bastidores.</p>
+
+        <h2>Vantagens e Desvantagens</h2>
+
+        <p>A principal vantagem do terminal é a velocidade e o controle total que ele oferece, além de ser universal — você vai precisar dele se for acessar um servidor diretamente. A desvantagem é a curva de aprendizado inicial, pois exige memorizar os comandos. Já a interface gráfica brilha ao mostrar o histórico de código visualmente e facilitar a compreensão de alterações, mas tem como ponto negativo a possibilidade de te deixar dependente, limitando o uso de recursos mais avançados do Git.</p>
+
+        <h2>O que o mercado usa?</h2>
+
+        <p>No dia a dia das empresas, o terminal é, de longe, o mais utilizado e exigido. A grande maioria das equipes de desenvolvimento espera que você saiba se virar na linha de comando. No entanto, o cenário mais comum na vida real é uma abordagem híbrida: os programadores usam o terminal para a rotina rápida (adicionar, salvar e enviar código) e recorrem a interfaces gráficas — geralmente aquelas já integradas ao próprio editor de código, como o VS Code — para tarefas que exigem muita visualização, como analisar o histórico de alterações ou resolver conflitos de código complexos.</p>
+
+        
+      </div>
+
+      <nav class="art-nav" aria-label="Navegação entre posts">
+        <a href="post-jornada-do-codigo.html">← A Jornada do Código</a>
+        <a href="../blog.html" class="art-nav__center">Todos os posts</a>
+        <a href="post-deploy.html">O que é Deploy? →</a>
+      </nav>
+
+    </div>
+  </main>
 
   <div id="site-footer-mount"></div>
   <script src="../assets/js/chrome.js"></script>

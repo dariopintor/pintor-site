@@ -1117,6 +1117,204 @@ hr.rule {
   cursor: pointer;
 }
 
+/* ==========================================================
+   Artigos (posts)
+   ========================================================== */
+
+.art {
+  --ink:       #1c1917;
+  --ink-light: #6b6560;
+  --ink-faint: #a09890;
+  --bg-alt:    #f7f4ef;
+  --accent:    #2a52be;
+  --accent-bg: #eef1fc;
+  --rule:      #e8e3dc;
+  --body-size: 21px;
+  --body-lh:   1.75;
+  --col:       68ch;
+
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 51px 19px 77px;
+  color: var(--ink);
+}
+
+/* ── Meta ── */
+.art-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  margin-bottom: 24px;
+}
+.art-meta__cat {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: var(--accent);
+}
+.art-meta__sep { color: var(--rule); }
+
+/* ── Título e dek ── */
+.art h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+.art-dek {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  color: var(--ink-light);
+  margin: 0 0 40px;
+  line-height: 1.5;
+}
+
+/* ── Imagem de capa ── */
+.art-cover { margin: 0 0 48px; }
+.art-cover img { width: 100%; display: block; }
+
+/* ── Corpo ── */
+.art-body {
+  font-family: var(--font-serif);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--ink);
+}
+.art-body p {
+  margin: 0 0 1.5em;
+  text-wrap: pretty;
+}
+
+/* Drop cap */
+.art-body p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.6em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  margin: 4px 10px 0 0;
+  color: var(--ink);
+}
+
+/* ── H2 ── */
+.art-body h2 {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border-top: 1px solid var(--rule);
+  padding-top: 2em;
+  margin: 2.8em 0 1em;
+}
+
+/* ── Links ── */
+.art-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(42, 82, 190, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms;
+}
+.art-body a:hover { text-decoration-color: rgba(42, 82, 190, 1); }
+
+/* ── Código inline ── */
+.art-body code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+/* ── Bloco de código ── */
+.art-body pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 0 0 1.5em;
+}
+.art-body pre code {
+  font-size: 0.88em;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ── Callout ── */
+.callout {
+  background: var(--accent-bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 16px 20px;
+  margin: 0 0 1.5em;
+}
+.callout__label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 6px;
+}
+.callout p { font-size: 0.9em; line-height: 1.6; margin: 0; }
+
+/* ── Listas ── */
+.art-body ul, .art-body ol { padding-left: 1.4em; margin: 0 0 1.5em; }
+.art-body li { margin-bottom: 0.4em; }
+
+/* ── Divisor ── */
+.art-body hr { border: none; border-top: 1px solid var(--rule); margin: 2.5em 0; }
+
+/* ── Navegação entre posts ── */
+.art-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding-top: 24px;
+  gap: 16px;
+}
+.art-nav a {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 150ms;
+}
+.art-nav a:hover { color: var(--accent); }
+.art-nav__center {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .art { padding: 32px 16px 51px; }
+  .art-body { font-size: 18px; line-height: 1.7; }
+  .art-body h2 { font-size: 20px; }
+  .art-body p:first-of-type::first-letter { font-size: 3em; }
+  .art-nav { flex-direction: column; align-items: flex-start; }
+}
+
 /* Utilities */
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0;
