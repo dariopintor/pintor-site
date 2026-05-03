@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git: instalação, comandos e conceitos — Dario Pintor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-screen-label="Post">
+  <div id="site-header-mount"></div>
+
+  <main id="conteudo">
+    <div class="art">
+
+      <header>
+        <div class="art-meta">
+          <span>03 · mai · 2026</span>
+          <span class="art-meta__sep">·</span>
+          <span class="art-meta__cat">Ferramentas</span>
+          <span class="art-meta__sep">·</span>
+          <span>12 min de leitura</span>
+        </div>
+        <h1>Git: instalação, comandos e conceitos</h1>
+        <p class="art-dek">Aprenda a versionar seu código com segurança e nunca mais perca seu trabalho</p>
+      </header>
+
+      <figure class="art-cover">
+        <img src="../assets/img/git.png" alt="Git: instalação, comandos e conceitos">
+      </figure>
+
+      <div class="art-body">
+
+        <p>O Git foi desenvolvido por Linus Torvalds para o Linux, mas se tornou tão bom que hoje é o padrão da indústria. Praticamente todo programador no mundo usa. Quando você for procurar emprego, Git estará em quase todo anúncio de desenvolvedor.</p>
+
+        <p>Já fizemos uma pequena introdução sobre o que Git é. Agora vamos aprender o básico dele. Para este artigo, vamos focar no Git via terminal — é aí que a mágica acontece.</p>
+
+        <h2>1. Instalando Git no seu computador</h2>
+
+        <p>Antes de começar, você precisa instalar Git no seu computador. É um programa como qualquer outro. Leva 5 minutos.</p>
+
+        <p>Se você usa Linux, abra o terminal e digite:</p>
+
+        <pre><code>sudo apt-get install git</code></pre>
+
+        <p>O Linux vai baixar e instalar tudo sozinho. Depois, para ter certeza que funcionou, digite:</p>
+
+        <pre><code>git --version</code></pre>
+
+        <p>Se aparecer algo tipo "git version 2.40.0", parabéns! Git está instalado.</p>
+
+        <p>Se você usa Windows, acesse https://git-scm.com/download/win, baixe o instalador e clique em "Próximo, Próximo, Concluir" — é como instalar qualquer programa normal. Se tiver dúvida em alguma tela, é seguro clicar em "Próximo". Depois que terminar, abra o terminal do Windows (PowerShell ou Command Prompt) e digite <code>git --version</code>. Se aparecer a versão, está tudo certo.</p>
+
+          <h2>2. Iniciando seu primeiro projeto com Git</h2>
+
+        <p>Agora que Git está instalado, vamos começar de verdade. Você vai criar uma pasta para seu projeto e "ativar" Git nela.</p>
+
+        <p>Comece criando uma pasta em qualquer lugar do seu computador. Pode ser no Desktop, Documents, onde quiser. Dê um nome significativo, tipo "meu-primeiro-projeto" ou "calculadora-js".</p>
+
+        <p>Em seguida, você precisa abrir um terminal dentro dessa pasta. Se estiver usando VS Code (que é super recomendado), é bem simples: abra a pasta que você criou diretamente no editor e acesse Terminal > New Terminal no menu superior. Pronto, o terminal fica ali mesmo dentro do editor.</p>
+
+        <p>Se preferir usar o terminal externo do seu sistema, navegue até a pasta digitando:</p>
+
+        <pre><code>cd caminho/da/sua/pasta</code></pre>
+
+        <p>Substitua "caminho/da/sua/pasta" pelo caminho real. Por exemplo: <code>cd Desktop/meu-primeiro-projeto</code>.</p>
+
+        <p>Agora, aqui vem o comando mais importante deste passo. Você vai dizer ao Git: "A partir de agora, você é responsável por guardar o histórico desta pasta". Você faz digitando:</p>
+
+        <pre><code>git init</code></pre>
+
+        <p>Isso cria um diretório oculto chamado .git que Git usa para guardar todo o histórico. Você nunca mexe nele. Git cuida sozinho. Pronto! Seu projeto agora está rastreado por Git. Toda mudança será registrada.</p>
+
+          <h2>3. Vendo o status do seu projeto</h2>
+
+        <p>Você criou um arquivo novo chamado index.html na pasta. Como Git sabe disso? Usando o comando <code>git status</code>.</p>
+
+        <p>Pense em <code>git status</code> como uma pergunta: "Ei Git, o que mudou desde a última vez que fiz um checkpoint?". Digite:</p>
+
+        <pre><code>git status</code></pre>
+
+        <p>Git vai responder com algo assim:</p>
+
+        <pre><code>On branch master
+No commits yet
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        index.html</code></pre>
+
+        <p>Git está dizendo: "Tem um arquivo novo aqui (index.html) que você não está acompanhando ainda". É como um aviso de que tem coisas novas.</p>
+
+        <h2>4. Adicionando arquivos para rastreamento</h2>
+
+        <p>Agora você disse para Git: "Ei, tem arquivo novo". Mas você ainda não pediu para Git registrar esse arquivo no histórico. Esse é o trabalho de <code>git add</code>.</p>
+
+        <p>Pense em <code>git add</code> assim: você está montando uma caixa de presente. Você coloca um item por um dentro da caixa. <code>git add</code> é você colocando um arquivo (ou vários) nessa caixa que depois será lacrada e guardada no histórico.</p>
+
+        <p>Para adicionar um arquivo específico, digite:</p>
+
+        <pre><code>git add index.html</code></pre>
+
+        <p>Isso diz: "Git, rastreie esse arquivo a partir de agora". Se você quer adicionar todos os arquivos da pasta de uma vez, use:</p>
+
+        <pre><code>git add *</code></pre>
+
+        <p>O asterisco é um coringa que significa "todos os arquivos". Prático quando você mudou vários arquivos de uma vez.</p>
+
+        <p>Se você digitar <code>git status</code> novamente, Git vai dizer:</p>
+
+        <pre><code>On branch master
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+        new file:   index.html</code></pre>
+
+        <p>Isso significa: "Ok, você colocou index.html na caixa. Está pronto para ser lacrado no próximo passo".</p>
+
+        <h2> 5. Fazendo seu primeiro commit</h2>
+
+        <p>Um commit é, basicamente, um "ponto de salvamento" do seu projeto. Na prática, o commit serve para criar um histórico seguro, organizado e rastreável da evolução do seu trabalho. Quando você cria um commit, está criando uma versão específica do seu código. Caso algo dê errado no futuro, você pode facilmente voltar para essa versão.</p>
+
+        <p>Toda vez que você faz um commit, você deve deixar uma mensagem explicando o que você fez. Essa mensagem é super importante. Daqui a meses, você vai olhar o histórico e pensar: "O que eu fiz naquele dia?". A mensagem responde isso.</p>
+
+        <p>Para commitar (salvar) as mudanças atuais do seu projeto, utilize:</p>
+
+        <pre><code>git commit -m "Adicionar a função de login no sistema"</code></pre>
+
+        <p>Aquela parte entre aspas é a mensagem do commit. Ela explica exatamente o que você fez. Depois que você executa o comando, o Git vai responder na tela indicando que tudo funcionou, com algo parecido com isso:</p>
+
+        <pre><code>[master (root-commit) a1b2c3d] Adicionar a função de login no sistema
+ 1 file changed, 5 insertions(+)
+ create mode 100644 index.html</code></pre>
+
+        <p>Isso significa: "Ok, guardei! Essa é a versão a1b2c3d do seu código, registrada com a mensagem que você deixou". Pronto! Você acabou de fazer seu primeiro versionamento. Seu projeto agora tem uma história. Se você mudar os arquivos amanhã e bater o arrependimento, você tem a segurança de poder voltar a esse ponto.</p>
+
+        <h2>6. Experimentando com segurança: branches</h2>
+
+        <p>Até agora você trabalhou em uma única "linha" de desenvolvimento. Tudo na branch master (ou main). Mas e se você quer fazer um experimento arriscado? Quer adicionar uma funcionalidade nova mas não sabe se vai dar certo? Não quer mexer no código que já está funcionando?</p>
+
+        <p>É aí que entra branches. Pense em branch como um "universo paralelo" do seu código. Você cria um branch, faz mudanças lá, testa, e se funcionar, você "mescla" de volta com o master. Se não funcionar, você simplesmente descarta.</p>
+
+        <p>Digamos que você está desenvolvendo uma calculadora e quer adicionar a função de divisão. Você cria um branch chamado "feature/divisao":</p>
+
+        <pre><code>git checkout -b feature/divisao</code></pre>
+
+        <p>Esse comando cria um branch novo e já te coloca dentro dele. Agora tudo que você fazer (git add, git commit) acontece nesse branch paralelo, não no master. Você trabalha normalmente: edita arquivos, faz <code>git add</code>, <code>git commit</code>. Tudo funciona igual.</p>
+
+        <p>Se você quer ver em qual branch você está agora, digite:</p>
+
+        <pre><code>git branch</code></pre>
+
+        <p>Git mostra a lista de branches que existem e marca qual você está agora com um asterisco *.</p>
+
+        <p>Quando terminou de testar no branch "feature/divisao" e quer voltar ao master, você faz:</p>
+
+        <pre><code>git checkout master</code></pre>
+
+        <p>Isso "troca de universo". Você volta ao código do master, que não foi tocado pelas mudanças que você fez no outro branch.</p>
+
+        <p>Se tudo funcionou e você quer trazer as mudanças do branch "feature/divisao" para o master, você faz um merge (fusão):</p>
+
+        <pre><code>git merge feature/divisao</code></pre>
+
+        <p>Isso diz: "Git, pegue tudo que eu fiz no branch feature/divisao e traga para o master". Se não tiver conflito, pronto! Está mesclado. A beleza disso é que você e um colega podem trabalhar em branches diferentes. Você na "feature/divisao", ele na "feature/subtracao". Ninguém mexe no código um do outro. Depois vocês mesclam tudo no master.</p>
+
+        <p>Branches são super poderosas. Com elas, você não tem medo de experimentar. Quer tentar uma abordagem diferente? Cria um branch. Não funcionou? Volta ao master. Funcionou? Mescla. Simples assim.</p>
+
+        <h2>7. Enviando seu código para o mundo</h2>
+
+        <p>Você já aprendeu tudo de Git. Seu código está versionado localmente. Cada mudança está registrada. Você pode voltar para qualquer ponto no tempo.</p>
+
+        <p>Mas e se seu computador quebrar? E se você quer trabalhar em vários computadores? E se você quer mostrar seu código para outras pessoas?</p>
+
+        <p>É aí que entra <code>git push</code>. Esse comando envia seu código (todos os commits) para um servidor remoto. A ferramenta mais popular para isso é GitHub. No momento em que você vai usar <code>git push</code> pela primeira vez, você vai precisar de uma conta no GitHub. Se não tem, crie uma em https://github.com/signup. É gratuito. Depois que criar a conta, você conectará seu computador local com sua conta lá. A partir daí, você consegue fazer:</p>
+
+      
+    <h2>Sincronizando seu Código com o GitHub</h2>
+    <p>Após realizar as alterações no seu projeto local, você precisa sincronizá-las com o servidor remoto. Para isso, utilizamos dois comandos principais: o <strong>Push</strong> e o <strong>Pull</strong>.</p>
+
+    <h2>Enviando arquivos: <code>git push</code></h2>
+    <p>O comando <code>git push</code> serve para enviar suas alterações locais para o repositório remoto, garantindo que seu código esteja seguro na nuvem e acessível de qualquer lugar.</p>
+    
+    <ul>
+        <li><strong>Como utilizar:</strong> No terminal, informe o destino utilizando os parâmetros <code>origin</code> (o servidor remoto) e <code>master</code> (a sua ramificação principal).</li>
+    </ul>
+    
+    <pre><code>git push origin master</code></pre>
+    
+    <ul>
+        <li><strong>Autenticação:</strong> O terminal solicitará seu usuário e senha (ou token de acesso) do GitHub para validar a operação.</li>
+        <li><strong>Resultado:</strong> Seu código é armazenado com segurança, evitando perdas caso algo aconteça com seu computador.</li>
+    </ul>
+
+    <h2> Recebendo atualizações: <code>git pull</code></h2>
+    <p>Enquanto o <em>push</em> envia, o <code>git pull</code> traz as mudanças que estão no servidor para o seu computador.</p>
+
+   
+        <strong>Exemplo prático:</strong> 
+        <p>Imagine que você e um colega estão colaborando no mesmo projeto. Se ele finalizar uma funcionalidade e fizer um <code>git push</code>, a versão do servidor estará mais atualizada que a sua. Para continuar o trabalho de onde ele parou e garantir que você tenha a versão mais recente, você deve executar o <code>git pull</code>.</p>
+  
+
+    <hr>
+    <h4>Resumo Técnico:</h4>
+    <ul>
+        <li><strong>Push:</strong> Upload do código local &rarr; Servidor Remoto.</li>
+        <li><strong>Pull:</strong> Download do código do Servidor &rarr; Máquina Local.</li>
+        <li><strong>Dica:</strong> Sempre é boa prática fazer um <code>pull</code> antes de começar a trabalhar para evitar conflitos de versão.</li>
+    </ul>
+
+        <h2>8. Seu fluxo de trabalho, na prática</h2>
+
+        <p>Depois de tudo que você aprendeu, aqui está como o seu dia a dia vai funcionar quando estiver desenvolvendo.</p>
+
+        <p>Você chega para trabalhar no seu projeto. A primeira coisa é fazer <code>git pull</code> para trazer qualquer mudança que possa ter vindo do servidor (se estiver trabalhando em time) ou simplesmente começar direto no seu editor. Você edita seus arquivos normalmente, criando novas funcionalidades ou corrigindo bugs.</p>
+
+        <p>De tempos em tempos — quando você termina uma funcionalidade, ou resolve um problema, ou qualquer mudança significativa — você faz <code>git status</code> para ver o que mudou. Depois você usa <code>git add *</code> para preparar todos esses arquivos para serem salvos. Logo após, faz <code>git commit -m "sua mensagem"</code> deixando claro o que você fez naquele ponto.</p>
+
+        <p>Repete esse ciclo quantas vezes quiser ao longo do dia. Nada de perder trabalho. Nada de pânico. Cada mudança importante está guardada em um ponto seguro.</p>
+
+        <p>Se você quer experimentar algo arriscado, cria um branch. Trabalha à vontade nesse universo paralelo. Se deu certo, volta ao master e faz um merge para trazer as mudanças de volta. Se não deu certo, você simplesmente volta ao master e aquele experimento fica guardado no histórico, mas não interfere no seu código principal.</p>
+
+        <p>Quando você termina uma sessão de trabalho e quer que seu código esteja seguro na nuvem (ou quer compartilhar com um colega), faz <code>git push</code> e seu trabalho sobe para o GitHub.</p>
+
+        <p>Isso é Git. E com isso você nunca mais perde código. Nunca mais entra em pânico. E está pronto para trabalhar em time sem conflitos.</p>
+
+       
+
+        
+      </div>
+
+      <nav class="art-nav" aria-label="Navegação entre posts">
+        <a href="post-git-github.html">← O que é o Versionamento de Código?</a>
+        <a href="../blog.html" class="art-nav__center">Todos os posts</a>
+        <a href="post-github.html">GitHub e Pull Requests →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <div id="site-footer-mount"></div>
+  <script src="../assets/js/chrome.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
