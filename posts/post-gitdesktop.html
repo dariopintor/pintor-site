@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Desktop: versionamento visual — Dario Pintor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-screen-label="Post">
+  <div id="site-header-mount"></div>
+
+  <main id="conteudo">
+    <div class="art">
+
+      <header>
+        <div class="art-meta">
+          <span>03 · mai · 2026</span>
+          <span class="art-meta__sep">·</span>
+          <span class="art-meta__cat">Ferramentas</span>
+          <span class="art-meta__sep">·</span>
+          <span>14 min de leitura</span>
+        </div>
+        <h1>GitHub Desktop: versionamento visual</h1>
+        <p class="art-dek">Uma interface amigável para quem está aprendendo a versionar o código sem precisar decorar comandos</p>
+      </header>
+
+      <figure class="art-cover">
+        <img src="../assets/img/gitdesktop.png" alt="GitHub Desktop: versionamento visual">
+      </figure>
+
+      <div class="art-body">
+
+        <p>Se os <a href="post-git.html">comandos de terminal</a> parecem um pouco abstratos, uma alternativa é o GitHub Desktop: uma ferramenta oficial e gratuita que transforma tudo o que aprendemos sobre add, commit e push em uma interface visual amigável. O resultado final é exatamente o mesmo. Seu código é versionado, histórico é mantido, branches funcionam igual. A única diferença é como você interage com a ferramenta. Ao usá-lo lado a lado com o VS Code, você ganha o melhor dos dois mundos: o poder de edição do VS Code e a clareza visual do GitHub Desktop para gerenciar suas versões.</p>
+
+        <h2>Instalando Git Desktop</h2>
+
+        <p>No Windows e Mac: acesse <a href="https://desktop.github.com" rel="noopener" target="_blank">desktop.github.com</a> e clique no botão para baixar. O instalador é simples: baixa o arquivo, clica, e pronto. Leva 2 minutos.</p>
+
+        <p>No Linux: Linux é um pouco mais complicado (porque Git Desktop é feito principalmente para Windows e Mac). Mas existe. Pesquise "Git Desktop Linux" se precisar. Ou, nesse caso, pode ser que você prefira ficar com a linha de comando mesmo.</p>
+
+        <p>Depois de instalar, abra Git Desktop. Você verá uma interface limpa com várias opções.</p>
+
+        <h2>Sua Primeira Vez: Configurando Git Desktop</h2>
+
+        <p>Quando você abre Git Desktop pela primeira vez, ele pede para você se configurar. Você coloca seu nome e seu email. Isso é importante porque esses dados vão aparecer em cada commit que você fizer. Coloque o mesmo nome e email que você usa no GitHub (no futuro, quando conectar).</p>
+
+        <h2>Criando Seu Primeiro Repositório</h2>
+
+        <p>Diferente de usar <code>git init</code> na linha de comando, no Git Desktop você pode criar um repositório de forma visual.</p>
+
+        <p><strong>Opção 1: Criar Novo Repositório.</strong> Clique em "File" → "New Repository". Aparece uma janela pedindo: Name (nome do repositório, tipo "meu-primeiro-projeto"), Local Path (onde você quer criar a pasta), Initialize this repository with a README (se marcar, Git cria um arquivo README automaticamente) e Git ignore (qual tipo de projeto). Clique "Create Repository" e pronto!</p>
+
+        <p><strong>Opção 2: Abrir um Repositório Existente.</strong> Se você já tinha um repositório criado com <code>git init</code> na linha de comando, clique em "File" → "Open Repository" e escolha a pasta. Git Desktop reconhece automaticamente que é um repositório Git e carrega tudo.</p>
+
+        <h2>Git Desktop e Sua IDE Favorita</h2>
+
+        <p>Aqui está uma das maiores vantagens do Git Desktop: você pode estar desenvolvendo em uma IDE (VS Code, NetBeans, Xcode, IntelliJ) e depois simplesmente abrir Git Desktop para gerenciar o versionamento do mesmo projeto.</p>
+
+        <p>Imagine que você começou um projeto no VS Code. Criou alguns arquivos, começou a programar, tudo lindo. Mas você esqueceu de inicializar Git no começo — coisa que iniciante faz o tempo todo. Sem Git Desktop, você teria que abrir o terminal, navegar até a pasta, fazer <code>git init</code>, e depois configurar tudo manualmente. Com Git Desktop, é trivial:</p>
+
+        <ul>
+          <li>Abre Git Desktop</li>
+          <li>Clica em "File" → "Add Local Repository"</li>
+          <li>Escolhe a pasta do seu projeto</li>
+          <li>Git Desktop pergunta: "Essa pasta não tem um repositório Git. Quer que eu crie um?"</li>
+          <li>Você clica "Create Repository" e pronto!</li>
+        </ul>
+
+        <p>Agora o mesmo projeto que está sendo desenvolvido no VS Code está automaticamente rastreado por Git Desktop. Você continua programando no VS Code, e sempre que quer fazer um commit, abre Git Desktop, prepara os arquivos, escreve a mensagem, e commita. A beleza disso é que você trabalha onde sempre trabalhou, sem mudar sua rotina.</p>
+
+        <p>Se você usa VS Code, toda vez que você faz uma mudança no seu código, VS Code marca o arquivo como modificado. Git Desktop automaticamente vê isso também e mostra na tela. Você vê em tempo real o que mudou, onde mudou, quantas linhas foram adicionadas ou removidas.</p>
+
+        <h2>Entendendo a Tela Principal</h2>
+
+        <p>Agora você está na tela principal do Git Desktop. Pode parecer complicado no começo, mas é bem simples. Na esquerda você vê: Current Repository (nome do projeto que você está trabalhando), Branches (lista de branches — você clica para trocar) e History (histórico de todos os commits). No meio e direita você vê: Changes (arquivos que mudaram desde o último commit), Commit Summary (onde você escreve a mensagem) e o botão de Commit.</p>
+
+        <h2>Fazendo Mudanças e Commits (Visualmente)</h2>
+
+        <p>Você editou um arquivo no seu editor de código. Git Desktop automaticamente vê que mudou. Aqui estão os passos:</p>
+
+        <p><strong>Passo 1 — Ver o que mudou.</strong> Na aba "Changes", Git Desktop mostra todos os arquivos que você alterou. Clique em um arquivo para ver exatamente o que mudou. Linhas vermelhas foram removidas. Linhas verdes foram adicionadas.</p>
+
+        <p><strong>Passo 2 — Preparar os Arquivos (Stage).</strong> Na linha de comando você fazia <code>git add</code>. No Git Desktop é visual: cada arquivo tem um checkbox ao lado. Se quer preparar um arquivo, clica no checkbox. Se quer preparar todos, há um botão "Stage All".</p>
+
+        <p><strong>Passo 3 — Escrever a Mensagem.</strong> Na caixa "Commit Summary", você escreve sua mensagem de commit — igual ao <code>git commit -m "mensagem"</code>. Se quiser adicionar uma descrição mais longa, tem um campo "Description" abaixo.</p>
+
+        <p><strong>Passo 4 — Fazer Commit.</strong> Clique no botão "Commit to [nome-da-branch]" e pronto!</p>
+
+        <h2>Vendo o Histórico</h2>
+
+        <p>Clique na aba "History" no lado esquerdo. Git Desktop mostra toda a timeline dos seus commits — o nome, quem fez, quando, quantas linhas foram adicionadas ou removidas. Se você clica em um commit específico, Git Desktop mostra exatamente quais arquivos mudaram e o que foi alterado linha por linha. É bem mais visual que fazer <code>git log</code> na linha de comando.</p>
+
+        <h2>Branches de Uma Forma Visual</h2>
+
+        <p>Você lembra que no Git puro você fazia <code>git checkout -b feature/nova-funcionalidade</code> para criar um branch? No Git Desktop é um clique.</p>
+
+        <p><strong>Criando um Branch:</strong> No lado esquerdo, clique em "New Branch". Aparece uma janela pedindo o nome. Você digita, clica "Create Branch", e pronto! Git Desktop cria o branch e já muda para ele.</p>
+
+        <p><strong>Trocando de Branch:</strong> Clique no nome do branch que você quer e Git Desktop faz a troca instantaneamente.</p>
+
+        <p><strong>Mesclando Branches:</strong> Quando terminou de trabalhar em um branch, vá em "Branch" → "Merge into [branch-de-destino]". Git Desktop cuida de tudo. Se não tiver conflito, mescla direto. Se tiver, Git Desktop mostra qual é e te ajuda a resolver.</p>
+
+        <h2>Enviando e Recebendo (Push e Pull)</h2>
+
+        <p>No Git Desktop, são dois botões no topo da janela. Se você tem commits que ainda não enviou, aparece um botão "Push" no canto superior direito. Se tem mudanças no servidor que você não tem no seu computador, aparece um botão "Pull". Git Desktop também mostra quantos commits você tem para enviar e quantos tem para receber.</p>
+
+        <h2>Clonando um Repositório do GitHub</h2>
+
+        <p>Clique em "File" → "Clone Repository". Git Desktop abre uma janela pedindo a URL do repositório e o Local Path (onde criar a pasta). Git Desktop faz tudo sozinho: baixa o repositório inteiro, cria a pasta, inicializa Git.</p>
+
+        <h2>Resolvendo Conflitos Visualmente</h2>
+
+        <p>Às vezes, quando você faz merge ou pull, pode ter conflito. Na linha de comando, isso é assustador — você precisa editar o arquivo e marcar qual versão quer. No Git Desktop, é muito mais simples: ele mostra o conflito de forma visual, você vê as duas versões lado a lado e clica qual quer manter.</p>
+
+        <h2>Voltando a um Commit Anterior</h2>
+
+        <p>Algo deu errado? Você quer voltar para uma versão anterior do seu código? Na linha de comando, era complicado com <code>git revert</code> ou <code>git reset</code>. No Git Desktop, você clica no commit que quer no histórico e tem a opção "Revert this commit". Um clique e Git Desktop desfaz aquele commit.</p>
+
+        <h2>Git Desktop vs Linha de Comando</h2>
+
+        <p>Git Desktop é bom para iniciantes que se assustam com terminal, quando você quer ver visualmente o que mudou antes de commitar, quando você quer trabalhar com branches e merges sem medo, e quando você quer evitar erros. A linha de comando é boa para quando você quer ser rápido (digitando é mais rápido que clicar), quando você está em um servidor remoto sem interface gráfica, ou quando você quer fazer coisas mais avançadas.</p>
+
+        <p>A verdade é que não precisa escolher um. Você pode usar Git Desktop 90% do tempo e, quando precisar de algo mais específico, abrir o terminal. Ambos funcionam no mesmo repositório. Git não se importa como você o usa.</p>
+
+        <h2>Seu Fluxo de Trabalho Com Git Desktop</h2>
+
+        <p>Agora seu fluxo é bem mais visual. Você edita seus arquivos no editor, abre Git Desktop e vê quais arquivos mudaram, clica para preparar os arquivos, escreve a mensagem do commit, clica "Commit". Se quer enviar para o servidor, clica "Push". Se quer trazer mudanças do servidor, clica "Pull". Se quer criar um branch, clica "New Branch". Se quer ver o histórico, clica em "History". Tudo visualmente. Tudo clicando.</p>
+
+        <div class="callout">
+          <span class="callout__label">Próximos passos</span>
+          <p>Agora você sabe versionamento de duas formas: pela <a href="post-git.html">linha de comando</a> e pela interface gráfica. Se você é iniciante e quer começar agora, comece com Git Desktop. Depois, quando estiver confortável, explore a linha de comando. Conhecer ambos torna você um desenvolvedor muito mais completo.</p>
+        </div>
+
+      </div>
+
+      <nav class="art-nav" aria-label="Navegação entre posts">
+        <a href="post-git.html">← Git: instalação, comandos e conceitos</a>
+        <a href="../blog.html" class="art-nav__center">Todos os posts</a>
+        <a href="post-github.html">GitHub e Pull Requests →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <div id="site-footer-mount"></div>
+  <script src="../assets/js/chrome.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
