@@ -3,16 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frontend vs Backend — Blog · Dario Pintor</title>
+  <title>O que significa Frontend e Backend? — Dario Pintor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-screen-label="Post">
   <div id="site-header-mount"></div>
 
- 
+  <main id="conteudo">
+    <div class="art">
+
+      <header>
+        <div class="art-meta">
+          <span>04 · mai · 2026</span>
+          <span class="art-meta__sep">·</span>
+          <span class="art-meta__cat">Desenvolvimento</span>
+          <span class="art-meta__sep">·</span>
+          <span>14 min de leitura</span>
+        </div>
+        <h1>O que significa Frontend e Backend?</h1>
+        <p class="art-dek">O palco e os bastidores — como os dois lados de uma aplicação se comunicam</p>
+      </header>
+
+      <figure class="art-cover">
+        <img src="../assets/img/frontend-backend.png" alt="Frontend vs Backend">
+      </figure>
+
+      <div class="art-body">
+
+        <p>Para início de conversa, este post tem o objetivo de introduzir termos comuns na área de TI para alunos iniciantes. Como <a href="post-jornada-do-codigo.html">dei uma visão de cima das árvores</a> no post sobre a jornada do código, aqui vou tentar oferecer uma visão mais de dentro — mais próxima do que você encontra quando está programando de verdade.</p>
+
+        <p>Para facilitar o entendimento do que é o Backend e o Frontend, vamos fazer uma analogia: imagine que você entra em um restaurante. Há uma parte que você vê — o cardápio bonito, o garçom atencioso, a decoração elegante, a comida sendo servida no seu prato. Esse é o Frontend: tudo aquilo com o que você interage e enxerga em um sistema web.</p>
+
+        <p>Mas tem mais coisa acontecendo nesse cenário. Nos bastidores, há um chef preparando a comida, fornecedores trazendo ingredientes, uma geladeira com itens armazenados. Tudo isso que você não vê, mas que faz o restaurante funcionar? Esse é o Backend. E onde os ingredientes são guardados, organizados e controlados? Esse é o Banco de Dados — o "almoxarifado" do restaurante.</p>
+
+        <h2>Frontend</h2>
+
+        <p>O Frontend é tudo aquilo que você consegue ver e tocar na tela. É a interface com a qual você interage. Quando você acessa um site, a beleza do design, as cores, os botões clicáveis, as caixas de texto onde você digita — tudo isso é Frontend.</p>
+
+        <p>Pense no Frontend como a "cara" da aplicação. É ele quem dá as boas-vindas ao usuário, deixa tudo bonito e intuitivo, e responde aos seus cliques e toques. As principais tecnologias do Frontend são:</p>
+
+        <ul>
+          <li><strong>HTML</strong> é como o "esqueleto" da página. Ele organiza o conteúdo: "Aqui vai um título, aqui vai uma imagem, aqui vai um botão". É a estrutura básica.</li>
+          <li><strong>CSS</strong> é o "designer" do Frontend. Enquanto o HTML monta a estrutura, o CSS diz: "Esse botão é azul, esse título é grande e vermelho, esse fundo é branco". Ele cuida da aparência e do layout.</li>
+          <li><strong>JavaScript</strong> é o "mágico" que adiciona movimento e interatividade. Quando você clica em um botão e algo acontece na hora (sem recarregar a página), é JavaScript trabalhando. Ele responde aos seus cliques, valida formulários e anima elementos na tela.</li>
+        </ul>
+
+        <h2>Backend</h2>
+
+        <p>Enquanto o Frontend é o que você vê, o Backend é o que trabalha nos bastidores. Ele recebe as informações que você envia (como um nome digitado em um formulário), processa essas informações, conversa com o banco de dados para guardar ou buscar dados, e depois devolve uma resposta.</p>
+
+        <p>O Backend é o responsável por toda a "lógica" da aplicação. Ele verifica se seu login está correto, calcula se há estoque disponível de um produto, processa um pagamento, busca as informações que você pediu. As principais tecnologias do Backend são:</p>
+
+        <ul>
+          <li><strong>Python</strong> é uma linguagem muito popular para iniciantes e também para empresas grandes. É elegante, fácil de ler e muito poderosa.</li>
+          <li><strong>JavaScript (Node.js)</strong> permite que você use a mesma linguagem do Frontend também no Backend. É uma ponte interessante entre os dois mundos.</li>
+          <li><strong>Java</strong> é uma linguagem robusta, usada por grandes empresas e sistemas complexos.</li>
+          <li><strong>PHP</strong> é especialista em criar páginas web dinâmicas e ainda é muito usado em muitos sites.</li>
+        </ul>
+
+        <h2>O Banco de Dados: O Guardião dos Dados</h2>
+
+        <p>O Backend não trabalha sozinho. Ele conversa constantemente com o Banco de Dados, que é onde todas as informações são armazenadas de forma organizada e segura.</p>
+
+        <p>Quando você se cadastra em um site e digita seu e-mail, sua senha e seu nome, essas informações não desaparecem. O Backend recebe esses dados e diz ao Banco de Dados: "Guarda isso aqui com segurança". Depois, quando você quer fazer login, o Backend pergunta ao Banco de Dados: "Tem um usuário com esse e-mail?". Se tiver, ele verifica a senha e te deixa entrar. O Banco de Dados é como uma biblioteca gigante onde cada informação está catalogada e pode ser encontrada rapidamente.</p>
+
+        <h2>Os Três Trabalhando Juntos</h2>
+
+        <p>Agora vem o legal: vamos ver toda essa "orquestra" funcionando junta! Imagine que você está em uma rede social e quer curtir uma foto.</p>
+
+        <p>Você clica no ícone de coração — isso é Frontend, você vendo e clicando. Naquele momento, o Frontend envia uma mensagem para o Backend dizendo: "O usuário quer curtir a foto número 12345!". O Backend recebe e vai até o Banco de Dados: "Adiciona uma curtida a essa foto!". O Banco de Dados registra e responde: "Ok, feito!". O Backend confirma para o Frontend: "Tudo certo!". E o Frontend mostra para você que agora o coração está preenchido e vermelho. Tudo isso acontece em frações de segundo.</p>
+
+        <h2>Por Que Essa Separação Faz Sentido?</h2>
+
+        <p><strong>Divisão de responsabilidades:</strong> cada parte faz aquilo que faz melhor. O Frontend se preocupa com como as coisas se veem e como o usuário interage. O Backend se preocupa com a lógica, as contas e a segurança dos dados. Como em um time de futebol: o goleiro tem seu trabalho, o meio-campista tem o dele.</p>
+
+        <p><strong>Segurança:</strong> imagine se o código que protege sua senha ficasse visível no Frontend. Qualquer pessoa poderia abrir o navegador e ver como sua senha é protegida! Por isso, as partes sensíveis ficam no Backend, longe dos olhos curiosos.</p>
+
+        <p><strong>Organização e manutenção:</strong> quando o código está separado, fica mais fácil encontrar bugs e corrigi-los. Se algo não está funcionando no Frontend, você sabe onde procurar. Se há um problema na lógica de negócios, você sabe que está no Backend.</p>
+
+        <p><strong>Escalabilidade:</strong> conforme o aplicativo cresce, você pode melhorar o Backend sem tocar no Frontend, ou vice-versa. Uma rede social gigante pode ter milhões de pessoas acessando ao mesmo tempo. É mais fácil crescer quando as coisas estão bem organizadas e separadas.</p>
+
+        <h2>Profissionais de Frontend</h2>
+
+        <p><strong>Frontend Developer</strong> — constrói a interface com a qual você interage. Trabalha com HTML, CSS e JavaScript para criar páginas bonitas, responsivas e intuitivas.</p>
+
+        <p><strong>UI Designer</strong> — enquanto o Frontend Developer constrói, o UI Designer desenha. Ele cria o visual, as cores, a disposição dos elementos. Usa ferramentas como Figma e Adobe XD.</p>
+
+        <p><strong>UX Designer</strong> — se preocupa com a experiência do usuário. Como a pessoa se sente usando o aplicativo? É fácil? É intuitivo? Eles pesquisam, fazem testes e garantem que tudo seja agradável de usar.</p>
+
+        <p><strong>Web Designer</strong> — uma mistura de UI Designer e Frontend Developer. Trabalha criando o visual e estruturando páginas web, combinando criatividade com código.</p>
+
+        <p><strong>Frontend Lead / Frontend Architect</strong> — um desenvolvedor frontend mais sênior que lidera o time, toma decisões técnicas e garante que o código esteja bem organizado.</p>
+
+        <h2>Profissionais de Backend</h2>
+
+        <p><strong>Backend Developer</strong> — constrói toda a lógica "invisível". Trabalha com linguagens como Python, Java, Node.js ou PHP para processar informações, conectar ao banco de dados e fazer tudo funcionar nos bastidores.</p>
+
+        <p><strong>Full Stack Developer</strong> — alguém que consegue trabalhar tanto no Frontend quanto no Backend. É como um "desenvolvedor versátil" que pode fazer tudo um pouco. Muito procurado no mercado!</p>
+
+        <p><strong>Database Administrator (DBA)</strong> — o "guardião" do banco de dados. Organiza, protege, faz backup das informações e garante que tudo esteja rápido e seguro. Trabalha com SQL, PostgreSQL, MySQL e outras tecnologias.</p>
+
+        <p><strong>DevOps Engineer</strong> — cuida da infraestrutura onde o aplicativo "vive". Faz deploy do código, configura servidores e garante que a aplicação esteja rodando 24/7 sem problemas. Trabalha com Docker, Kubernetes e serviços de nuvem (AWS, Google Cloud).</p>
+
+        <p><strong>Security Engineer</strong> — trabalha principalmente com o Backend, focado em segurança. Protege contra ataques, garante que as senhas estejam criptografadas e que os dados sejam confidenciais.</p>
+
+        <h2>Profissionais que Trabalham nos Dois Lados</h2>
+
+        <p><strong>Product Manager</strong> — define o que será construído, qual é o objetivo do produto e faz a ponte entre designers, desenvolvedores e usuários.</p>
+
+        <p><strong>QA Engineer / Tester</strong> — testa tanto o Frontend (clica em botões, testa a interface) quanto o Backend (verifica se os dados estão sendo guardados corretamente, se as operações são seguras). Procura bugs antes que os usuários encontrem.</p>
+
+        <p><strong>Tech Lead / Engineering Manager</strong> — um líder técnico que entende tanto Frontend quanto Backend e coordena o trabalho de toda a equipe.</p>
+
+        <h2>Por Onde Devo Começar?</h2>
+
+        <p>Muitos profissionais começam como Frontend Developer ou Backend Developer, ganham experiência em uma área e depois decidem o caminho:</p>
+
+        <ul>
+          <li>Ficar especializados naquela área e virar um expert</li>
+          <li>Aprender o outro lado e virar Full Stack Developer</li>
+          <li>Seguir para liderança como Tech Lead ou Engineering Manager</li>
+          <li>Especializar em um campo específico como segurança ou banco de dados</li>
+        </ul>
+
+        <div class="callout">
+          <span class="callout__label">Dica</span>
+          <p>Se você está começando agora, o Frontend costuma ser o ponto de entrada mais visual e motivador. Você vê o resultado imediato do que está construindo. Depois que tiver confiança, o Backend abre um mundo novo de possibilidades.</p>
+        </div>
+
+      </div>
+
+      <nav class="art-nav" aria-label="Navegação entre posts">
+        <a href="post-banco-de-dados.html">← Banco de Dados</a>
+        <a href="../blog.html" class="art-nav__center">Todos os posts</a>
+        <a href="post-processo-de-software.html">Processo de Software →</a>
+      </nav>
+
+    </div>
+  </main>
 
   <div id="site-footer-mount"></div>
   <script src="../assets/js/chrome.js"></script>
