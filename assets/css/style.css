@@ -1179,7 +1179,15 @@ hr.rule {
 
 /* ── Imagem de capa ── */
 .art-cover { margin: 0 0 48px; }
-.art-cover img { width: 100%; display: block; }
+.art-cover img { width: 70%; display: block; margin: 0 auto; }
+.art-cover figcaption {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-style: italic;
+}
 
 /* ── Corpo ── */
 .art-body {
